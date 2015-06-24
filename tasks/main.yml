@@ -1,0 +1,12 @@
+# install nodejs and current npm
+---
+
+- fail: 'OS family is not supported!'
+  when: ansible_os_family not in [ "Debian" ]
+
+- name: Install node.js from nodesource repository
+  include: "../roles/nodejs-nodesource/tasks/main.yml"
+  when: ansible_os_family == "Debian"
+
+- name: Self-upgrade npm to current version
+  command: "npm install --global npm"
