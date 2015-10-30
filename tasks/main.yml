@@ -5,7 +5,6 @@
   when: ansible_os_family not in [ "Debian" ]
 
 - name: Install node.js from nodesource repository
-  when: ansible_os_family == "Debian"
   include: "../sub_roles/nodejs-nodesource/tasks/main.yml"
 
 - name: Self-upgrade npm to current version
