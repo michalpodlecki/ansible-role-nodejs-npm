@@ -9,4 +9,4 @@
   when: ansible_os_family == "Debian"
 
 - name: Self-upgrade npm to current version
-  command: "npm install --global npm"
+  command: "npm install --global npm@latest"
