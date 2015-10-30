@@ -5,8 +5,7 @@
   when: ansible_os_family not in [ "Debian" ]
 
 - name: Install node.js from nodesource repository
-  include: "../roles/nodejs-nodesource/tasks/main.yml"
-  when: ansible_os_family == "Debian"
+  include: "../sub_roles/nodejs-nodesource/tasks/main.yml"
 
 - name: Self-upgrade npm to current version
-  command: "npm install --global npm"
+  command: "npm install --global npm@latest"
