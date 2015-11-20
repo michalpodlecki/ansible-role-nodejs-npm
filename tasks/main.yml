@@ -7,5 +7,5 @@
 - name: Install node.js from nodesource repository
   include: "../sub_roles/nodejs-nodesource/tasks/main.yml"
 
-- name: Self-upgrade npm to current version
-  command: "npm install --global npm@latest"
+# - name: Self-upgrade npm to current version
+#   command: "npm install --global npm@latest"
